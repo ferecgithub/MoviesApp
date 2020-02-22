@@ -1,6 +1,7 @@
 package com.ferechamitbeyli.moviesapp.ui.detail
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.ferechamitbeyli.moviesapp.R
@@ -86,6 +87,11 @@ class DetailActivity : BaseActivity<ActivityDetailBinding, DetailViewModel>() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        onBackPressed()
+        return true
     }
 
 
